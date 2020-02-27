@@ -2,5 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-
-ReactDOM.render(<App />, document.getElementById("root"));
+import { StateProvider } from "./utils/store";
+	
+ReactDOM.render(
+	<StateProvider>
+		<App />
+	</StateProvider>,
+document.getElementById("root"));
